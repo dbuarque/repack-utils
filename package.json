@@ -1,0 +1,53 @@
+{
+  "name": "repack-utils",
+  "version": "0.1.10",
+  "description": "Repack base cli",
+  "homepage": "https://github.com/dbuarque/repack-utils",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/babel src -d dist -s",
+    "start-dev": "./node_modules/.bin/nodemon src/index.js --exec ./node_modules/.bin/babel-node --presets es2015,stage-0",
+    "test": "./node_modules/.bin/mocha ./tests/* --compilers js:babel-register",
+    "preversion": "npm test",
+    "version": "npm run build && git add -A dist",
+    "postversion": "git push origin master && git push --tags"
+  },
+  "keywords": [
+    "repack",
+    "repack-utils",
+    "cli",
+    "interactive"
+  ],
+  "private": false,
+  "bugs": {
+    "url": "https://github.com/dbuarque/repack-utils/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dbuarque/repack-utils.git"
+  },
+  "author": "Diogenes Buarque Ianakiara",
+  "contributors": [
+    "David Ianakiara <david@getty.io>"
+  ],
+  "license": "Apache License, Version 2.0",
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "babel-register": "^6.4.3",
+    "debug": "^2.2.0",
+    "mocha": "^2.3.4",
+    "nodemon": "^1.8.1",
+    "should": "^8.2.0"
+  },
+  "dependencies": {
+    "inquirer": "^0.11.3",
+    "vorpal": "^1.6.1",
+    "vorpal-grep": "0.0.11",
+    "vorpal-less": "0.0.12",
+    "vorpal-repl": "^1.1.8",
+    "vorpal-use": "^1.0.1",
+    "path": "^0.12.7"
+  }
+}

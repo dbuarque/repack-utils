@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - "4.2.0"
+  - "4.2.3"
+  - "4.2.4"
+  - "4.2.5"
+  - "4.2.6"
+sudo: false
+branches:
+  only:
+    - master
