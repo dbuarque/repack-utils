@@ -1,6 +1,6 @@
 {
   "name": "repack-utils",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Repack utils",
   "homepage": "https://github.com/dbuarque/repack-utils",
   "main": "dist/index.js",
